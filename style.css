@@ -119,3 +119,25 @@ p {
     width: 650px;
     border-radius: 10px;
 }
+
+/*ajuste del diseño para pantallas más pequeñas*/
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .contenedor {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Para celulares más chicos */
+@media (max-width: 480px) {
+    h1 { font-size: 22px; }
+    p { font-size: 14px; }
+}
