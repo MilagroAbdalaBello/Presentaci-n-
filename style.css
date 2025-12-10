@@ -1,10 +1,10 @@
-/* cuerpo y fondo */
 body {
     background-color: gray;
     color: black;
 }
 
-/* diseño del texto con h1 y h3 */
+/*diseño del texto con el h1*/
+
 h1 {
     text-align: center;
     font-size: 48px;
@@ -15,9 +15,11 @@ h1 {
 h3 {
     text-align: center;
     font-size: 20px;
+
 }
 
-/* animación del teléfono */
+/*como si el télefono vibrará*/
+
 .phone {
     font-size: 20px;
     animation: vibrar 0.4s infinite alternate;
@@ -28,13 +30,13 @@ h3 {
     100% { transform: translateX(3px); }
 }
 
-/* párrafos y estrellas */
 p {
     color: rgb(29, 18, 9);
     text-align: center;
     font-weight: 100;
     font-size: 30px;
     text-shadow: 2px 2px 5px black;
+
 }
 
 .stars {
@@ -42,15 +44,17 @@ p {
     color: rgb(209, 115, 81);
 }
 
-/* cuadro responsive */
+/*cuadro*/
+
 .cuadro-grid {
     display: grid;
-    grid-template-columns: repeat(6, 3fr); /* 3 columnas fijas */
-    gap: 10px;
-    width: 90%;
-    margin: 30px auto;
+    grid-template-columns: repeat(6, 1fr); /* 5 columnas */
+    grid-template-rows: repeat(3, 100px); /* 3 filas (altura ajustable) */
+    gap: 10px; /* espacio entre cuadros */
+    width: 89%;
+    margin: auto;
+    margin-top: 30px;
 }
-
 
 .item {
     background: #1e1e1e;
@@ -59,61 +63,20 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 16px; /* tamaño base de las letras */
+    font-size: 10px;
     font-weight: bold;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     transition: .3s;
-    padding: 10px; 
-    text-align: center;
-    word-wrap: break-word; 
-    overflow-wrap: break-word;
-    white-space: normal; /* importante para que el texto no se salga */
 }
 
-/* hover */
+/* EFECTO HOVER */
 .item:hover {
-    transform: scale(1.05);
+    transform: scale(1.08);
     box-shadow: 0 0 15px cyan;
     cursor: pointer;
 }
 
-/* media queries para pantallas más pequeñas */
-@media (max-width: 768px) {
-    .item {
-        font-size: 14px; /* letra más pequeña en tablets */
-        padding: 8px;
-    }
-
-    .contenedor-img img {
-        width: 100%; /* imágenes responsivas */
-    }
-}
-
-@media (max-width: 480px) {
-    .cuadro-grid {
-        grid-template-columns: repeat(3, 3fr); /* 1 columna vertical */
-    }
-
-
-    h1 {
-        font-size: 22px;
-    }
-
-    p {
-        font-size: 14px;
-    }
-
-    .contenedor-img {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .contenedor-img img {
-        width: 100%;
-    }
-}
-
-/* diseño de los contactos */
+/*diseño de los contactos*/
 .contacto {
     text-align: center;
     margin-top: 30px;
@@ -139,37 +102,20 @@ p {
     background: #25D366;
 }
 
+/* Hover bonito */
 .btn:hover {
     transform: scale(1.1);
     box-shadow: 0 0 12px white;
 }
 
-/* diseño de las imágenes */
+/*diseño de las fotos*/
+
 .contenedor-img {
     display: flex;
-    gap: 15px;
+    gap: 15px; /* separa las imágenes */
 }
 
 .contenedor-img img {
     width: 650px;
     border-radius: 10px;
-}
-
-/* ajuste general para pantallas más pequeñas */
-@media (max-width: 768px) {
-    body {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    .contenedor {
-        width: 100%;
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 { font-size: 22px; }
-    p { font-size: 14px; }
 }
