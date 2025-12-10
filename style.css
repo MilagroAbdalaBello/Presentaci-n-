@@ -44,16 +44,13 @@ p {
     color: rgb(209, 115, 81);
 }
 
-/*cuadro*/
-
+/* cuadro responsive */
 .cuadro-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr); /* 5 columnas */
-    grid-template-rows: repeat(3, 100px); /* 3 filas (altura ajustable) */
-    gap: 10px; /* espacio entre cuadros */
-    width: 89%;
-    margin: auto;
-    margin-top: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    width: 90%;
+    margin: 30px auto 0 auto;
 }
 
 .item {
@@ -63,18 +60,38 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 22px;
+    font-size: 18px; /* más pequeño para que no se salga en pantallas chicas */
     font-weight: bold;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     transition: .3s;
+    padding: 10px; /* espacio interno para el texto */
+    text-align: center;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
 }
 
 /* EFECTO HOVER */
 .item:hover {
-    transform: scale(1.08);
+    transform: scale(1.05); /* un poco más suave en móviles */
     box-shadow: 0 0 15px cyan;
     cursor: pointer;
 }
+
+/* MEDIA QUERIES: Ajuste en pantallas pequeñas */
+@media (max-width: 768px) {
+    .item {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .item {
+        font-size: 14px;
+        padding: 6px;
+    }
+}
+
 
 /*diseño de los contactos*/
 .contacto {
@@ -141,3 +158,5 @@ p {
     h1 { font-size: 22px; }
     p { font-size: 14px; }
 }
+
+
