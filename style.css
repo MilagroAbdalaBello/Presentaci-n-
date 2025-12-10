@@ -45,7 +45,6 @@ p {
 /* cuadro responsive */
 .cuadro-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 10px;
     width: 90%;
     margin: 30px auto 0 auto;
