@@ -1,4 +1,121 @@
-.title {
-    color: aqua;
+body {
+    background-color: gray;
+    color: black;
+}
 
+/*diseño del texto con el h1*/
+
+h1 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 100;
+    text-shadow: 2px 2px 5px black;
+}
+
+h3 {
+    text-align: center;
+    font-size: 20px;
+
+}
+
+/*como si el télefono vibrará*/
+
+.phone {
+    font-size: 20px;
+    animation: vibrar 0.4s infinite alternate;
+}
+
+@keyframes vibrar {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(3px); }
+}
+
+p {
+    color: rgb(29, 18, 9);
+    text-align: center;
+    font-weight: 100;
+    font-size: 30px;
+    text-shadow: 2px 2px 5px black;
+
+}
+
+.stars {
+    font-size: 20px;
+    color: rgb(209, 115, 81);
+}
+
+/*cuadro*/
+
+.cuadro-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 5 columnas */
+    grid-template-rows: repeat(3, 100px); /* 3 filas (altura ajustable) */
+    gap: 10px; /* espacio entre cuadros */
+    width: 89%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.item {
+    background: #1e1e1e;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: .3s;
+}
+
+/* EFECTO HOVER */
+.item:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px cyan;
+    cursor: pointer;
+}
+
+/*diseño de los contactos*/
+.contacto {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    margin: 5px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: .3s;
+    color: white;
+}
+
+.gmail {
+    background: #d44638;
+}
+
+.whatsapp {
+    background: #25D366;
+}
+
+/* Hover bonito */
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 12px white;
+}
+
+/*diseño de las fotos*/
+
+.contenedor-img {
+    display: flex;
+    gap: 15px; /* separa las imágenes */
+}
+
+.contenedor-img img {
+    width: 650px;
+    border-radius: 10px;
 }
