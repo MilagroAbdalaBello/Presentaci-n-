@@ -45,10 +45,12 @@ p {
 /* cuadro responsive */
 .cuadro-grid {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 10px;
     width: 90%;
     margin: 30px auto 0 auto;
 }
+
 
 .item {
     background: #1e1e1e;
@@ -87,10 +89,9 @@ p {
     }
 }
 
-@media (max-width: 480px) {
-    .item {
-        font-size: 12px; /* letra aún más pequeña en celulares */
-        padding: 6px;
+@media (max-width: 768px) {
+    .cuadro-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     h1 {
